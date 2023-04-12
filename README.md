@@ -14,5 +14,9 @@ This is a guide to install the virtual machine for Inception project for 42 Scho
 
 <img width="799" alt="" src="./pic/6.png">
 
-<img width="799" alt="" src="./pic/7.png">
+<img width="799" alt="" src="./pic/1.png">
 
+ 
+ 
+## Screenshots  
+![Alt text](./pic/1.png?raw=true "Title")
