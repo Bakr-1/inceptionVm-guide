@@ -1,6 +1,6 @@
 # inceptionVm-guide
 ## This is a guide to install the virtual machine for Inception project for 42 School
-
+### NOTE: Keep in mind this is a guide to help coders do the project efficiently and faster by providing the minimum things they would need to complete it and not install many useless things such as gui which would make the virtual machine slow and crash at some point.
 first of all start by adding the virtual machine to your virtualbox by clicking new
 
 <img width="799" alt="" src="./pic/1.png">
