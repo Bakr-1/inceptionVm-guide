@@ -98,8 +98,15 @@ apt-get update && apt-get upgrade && apt-get install sudo -y
 <img width="799" alt="" src="./pic/21.png">
 
 add your user to the sudo group with the following command:
+
 ```bash
 adduser username sudo
+```
+
+or
+
+```bash
+ usermod -aG sudo username
 ```
 
 <img width="799" alt="" src="./pic/22.png">
