@@ -188,24 +188,50 @@ once the SSH:localhost appear on the bottom left corner of the screen you can ju
 
 installation you need to make before going forward:
 ```bash
-sudo apt-get install git wget zsh vim docker docker-compose make openbox xinit kitty firefox-esr
+sudo apt-get install git wget zsh vim make openbox xinit kitty firefox-esr -y
 ```
 
-Install curl to be able to install the latest version of docker-compose
+
+Docker Engine Installation
+```bash
+sudo apt-get update && sudo apt-get upgrade -y
+```
+
+first we will set the repository
 
 ```bash
-sudo apt install curl
+sudo apt-get update
+sudo apt-get install ca-certificates curl gnupg
 ```
 
-Installing the latest version of docker-compose
-
-```bash
-sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-```
 
 ```bash
-sudo chmod +x /usr/local/bin/docker-compose
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
 ```
+
+```bash
+echo \
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+
+installing the docker engine:
+
+```bash
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+
+at the end to run docker from your user you need to add it to the docker group:
+```bash
+sudo gpasswd -a $USER docker
+
+newgrp docker
+```
+
 
 to be able to access the websites or filezilla you just need to execute:
 
@@ -234,6 +260,10 @@ add new line under your host name
 <img width="799" alt="" src="./pic/40.png">
 
 ### NOTE: Keep in mind this is a guide to help coders do the project efficiently and faster by providing the minimum things they would need to complete it and not install many useless things such as gui which would make the virtual machine slow and crash at some point.
+
+# Resourses to help you doing the project:
+[link1](https://github.com/llescure/42_Inception)
+[link2](https://github.com/vbachele/Inception)
 
 ## License  
 [MIT](https://choosealicense.com/licenses/mit/)  
