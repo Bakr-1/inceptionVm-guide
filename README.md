@@ -191,6 +191,21 @@ installation you need to make before going forward:
 sudo apt-get install git wget zsh vim docker docker-compose make openbox xinit kitty firefox-esr
 ```
 
+Install curl to be able to install the latest version of docker-compose
+
+```bash
+sudo apt install curl
+```
+
+Installing the latest version of docker-compose
+
+```bash
+sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+```
+
+```bash
+sudo chmod +x /usr/local/bin/docker-compose
+```
 
 to be able to access the websites or filezilla you just need to execute:
 
