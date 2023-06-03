@@ -188,7 +188,7 @@ once the SSH:localhost appear on the bottom left corner of the screen you can ju
 
 installation you need to make before going forward:
 ```bash
-sudo apt-get install git wget zsh vim make openbox xinit kitty firefox-esr -y
+sudo apt-get install git wget zsh vim make openbox xinit kitty firefox-esr filezilla -y
 ```
 
 
@@ -201,7 +201,7 @@ first we will set the repository
 
 ```bash
 sudo apt-get update
-sudo apt-get install ca-certificates curl gnupg
+sudo apt-get install ca-certificates curl gnupg -y
 ```
 
 
